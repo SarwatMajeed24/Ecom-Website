@@ -1,8 +1,6 @@
 import {groq} from "next-sanity"
 import {client} from "@/sanity/lib/client"
 import Card from "./Card"
-
-import Link from "next/link"
 const Products = async() => {
     const products = await client.fetch(groq`*[_type=="product"]`)
   return (
