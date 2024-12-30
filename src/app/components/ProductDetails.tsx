@@ -81,7 +81,7 @@ import { useContext, useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { CartContext } from "../context/CardContext";
 
-const ProductDetails = ({ product }: any) => {
+const ProductDetails = ({product}: any) => {
   const [index, setIndex] = useState(0);
   const { cartItems, addProduct, qty, decQty, incQty }: any = useContext(CartContext);
 
@@ -90,14 +90,15 @@ const ProductDetails = ({ product }: any) => {
       <div className="flex gap-[5px] justify-center">
         <div>
           <div className="h-[450px] flex items-center mb-[25px]">
-            <Image
-              loader={() => urlForImage(product.images[index]).url()}
-              src={urlForImage(product.images[index]).url()}
-              alt={product.images[index]}
-              width={350}
-              height={350}
-              className="object-cover mx-auto"
-            />
+          <Image
+               loader={() => urlForImage(product.images[index]).url()}
+                src={urlForImage(product.images[index]).url()}
+                alt={product.name || "Product Image"}
+                 width={350}
+                  height={350}
+                 className="object-cover mx-auto"
+               />
+
           </div>
           <div className="flex gap-[5px] justify-center">
             {product.images?.map((item: any, i: number) => (
