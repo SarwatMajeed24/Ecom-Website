@@ -61,8 +61,8 @@ if(stripeProduct){
     const session = await stripe.checkout.sessions.create({
         line_items: stripeProducts,
         mode: 'payment',
-        success_url: `https://ecommerce-website-9a1b.vercel.app/success`,
-        cancel_url: `https://ecommerce-website-9a1b.vercel.app`,
+        success_url: `https://localhost:3000/success`,
+        cancel_url: `http://localhost:3000/`,
       });
     return NextResponse.json({
         url: session.url
