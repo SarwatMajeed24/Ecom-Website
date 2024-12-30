@@ -14,7 +14,7 @@ const handleClose = () => {
 const handleCheckout = async () => {
  
   try{ 
-    const response = await fetch ("/api/checkout",{
+    const response = await fetch ("http://localhost:3000/api/checkout",{
       method:"POST",
       headers:{
         "Content-Type": "application/json"
