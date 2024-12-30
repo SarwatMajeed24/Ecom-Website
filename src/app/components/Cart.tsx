@@ -2,7 +2,6 @@
 import React, { useContext } from "react";
 import { AiOutlineLeft, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai"
 import { CartContext } from "../context/CardContext";
-import { div } from "framer-motion/client";
 import Image from "next/image";
 import { urlForImage } from "@/sanity/lib/image";
 import { TiDeleteOutline } from "react-icons/ti";
